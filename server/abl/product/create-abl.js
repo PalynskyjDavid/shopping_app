@@ -10,6 +10,7 @@ let classroomDao = new ClassroomDao(
   path.join(__dirname, "..", "..", "storage", "classroom.json")
 );
 
+/*tohle schema sem nepatri */
 let schema = {
   type: "object",
   properties: {

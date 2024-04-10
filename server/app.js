@@ -3,9 +3,9 @@ const express = require("express");
 
 //const Router = rqeuire("./controller/-controller")
 const productRouter = require("./controller/product-controller.js");
-const { cartRouter } = require("./cartRouter.js");
-const userRouter = rqeuire("./controller/user-controller.js");
-const categoryRouter = rqeuire("./controller/category-controller.js");
+const cartRouter = require("./controller/cart-controller.js")
+const userRouter = require("./controller/user-controller.js");
+const categoryRouter = require("./controller/category-controller.js");
 
 //server initialization
 const app = express();
