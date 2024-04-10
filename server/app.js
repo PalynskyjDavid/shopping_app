@@ -3,7 +3,7 @@ const express = require("express");
 
 //const Router = rqeuire("./controller/-controller")
 const productRouter = require("./controller/product-controller.js");
-const cartRouter = rqeuire("./controller/cart-controller.js");
+const { cartRouter } = require("./cartRouter.js");
 const userRouter = rqeuire("./controller/user-controller.js");
 const categoryRouter = rqeuire("./controller/category-controller.js");
 
@@ -32,4 +32,7 @@ app.listen(PORT, function (err) {
 });
 
 //routes
-app.use("/product", productRouter)
+app.use("/product", productRouter);
+app.use("/cart", cartRouter);
+app.use("/user", userRouter);
+app.use("/category", cartRouter);
