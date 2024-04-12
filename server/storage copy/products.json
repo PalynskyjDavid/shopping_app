@@ -1,0 +1,20 @@
+[
+    {
+        "Id": "foodsid1",
+        "Name": "Pizza",
+        "Brand": "Domino's",
+        "Price": 12.99
+    },
+    {
+        "Id": "foodsid2",
+        "Name": "Burger",
+        "Brand": "McDonald's",
+        "Price": 4.99
+    },
+    {
+        "Id": "foodsid3",
+        "Name": "Salad",
+        "Brand": "Fresh & Co",
+        "Price": 7.99
+    }
+]

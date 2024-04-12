@@ -30,7 +30,7 @@ class RolesDao {
 
   async getRole(id) {
     let rolelist = await this._loadAllRoles();
-    const result = rolelist.find((b) => b.id === id);
+    const result = rolelist.find((b) => b.Id === id);
     return result;
   }
 

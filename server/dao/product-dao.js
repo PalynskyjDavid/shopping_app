@@ -30,7 +30,7 @@ class ProductsDao {
 
   async getProduct(id) {
     let productlist = await this._loadAllProducts();
-    const result = productlist.find((b) => b.id === id);
+    const result = productlist.find((b) => b.Id === id);
     return result;
   }
 

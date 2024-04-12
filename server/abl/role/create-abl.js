@@ -20,7 +20,7 @@ async function CreateAbl(req, res) {
     const valid = ajv.validate(schema, req.body);
     if (valid) {
       let role = req.body;
-      role = await dao.createrole(role);
+      role = await dao.createRole(role);
       res.json(role);
     } else {
       res.status(400).send({

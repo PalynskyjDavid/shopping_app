@@ -28,13 +28,13 @@ class UsersDao {
     return user;
   }
 
-  async getuser(id) {
+  async getUser(id) {
     let userlist = await this._loadAllUsers();
-    const result = userlist.find((b) => b.id === id);
+    const result = userlist.find((b) => b.Id === id);
     return result;
   }
 
-  async updateuser(user) {
+  async updateUser(user) {
     let userlist = await this._loadAllUsers();
     const userIndex = userlist.findIndex((b) => b.id === user.id);
     if (userIndex < 0) {
@@ -49,7 +49,7 @@ class UsersDao {
     return userlist[userIndex];
   }
 
-  async deleteuser(id) {
+  async deleteUser(id) {
     let userlist = await this._loadAllUsers();
     const userIndex = userlist.findIndex((b) => b.id === id);
     if (userIndex >= 0) {
