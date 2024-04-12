@@ -59,7 +59,7 @@ class UsersDao {
     return {};
   }
 
-  async listusers() {
+  async listUsers() {
     let userlist = await this._loadAllUsers();
     return userlist;
   }

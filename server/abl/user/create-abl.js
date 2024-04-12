@@ -14,7 +14,7 @@ let schema = {
     type: "object",
     properties: {
       Id: { type: "string" },
-      RoleList: roleDao.listRoles(),
+      RoleList: roleDao.listRoles(), //["admin", "user", "bot"]
       PasswordHash: { type: "string", minLength: 4 },
       Name: { type: "string" },
       Surname: { type: "string" },
@@ -22,7 +22,7 @@ let schema = {
       Email: { type: "string" },
       Phone: { type: "number" },
       Address: { type: "string" },
-      ThemeMode:  { type: "bool" }
+      ThemeMode: { type: "bool" }
     },
     required: ["Id", "RoleList", "PasswordHash", "Name", "Surname"],
   };

@@ -5,7 +5,7 @@ const express = require("express");
 const productRouter = require("./controller/product-controller.js");
 const cartRouter = require("./controller/cart-controller.js")
 const userRouter = require("./controller/user-controller.js");
-const categoryRouter = require("./controller/category-controller.js");
+const roleRouter = require("./controller/role-controller.js");
 
 //server initialization
 const app = express();
@@ -21,6 +21,13 @@ app.get("/", (req, res) => {
     res.send("- Shopping app -")
 })
 
+//routes
+app.use("/product", productRouter);
+app.use("/cart", cartRouter);
+app.use("/user", userRouter);
+app.use("/role", roleRouter);
+
+//all other routes
 app.get("/*", (req, res) => {
     res.send("Unknown path!");
 });
@@ -30,9 +37,3 @@ app.listen(PORT, function (err) {
     if (err) console.log(err);
     console.log(`Example app listening at http://localhost:${PORT}`);
 });
-
-//routes
-app.use("/product", productRouter);
-app.use("/cart", cartRouter);
-app.use("/user", userRouter);
-app.use("/category", cartRouter);

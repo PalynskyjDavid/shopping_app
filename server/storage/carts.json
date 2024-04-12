@@ -1,0 +1,23 @@
+[
+    {
+        "Id": "listsid1",
+        "UserId": "usersid1",
+        "name": "Cake",
+        "TotalPrice": "5",
+        "Availability": "0"
+    },
+    {
+        "Id": "listsid2",
+        "UserId": "usersid2",
+        "name": "Pancake",
+        "TotalPrice": "4",
+        "Availability": "1"
+    },
+    {
+        "Id": "listsid3",
+        "UserId": "usersid3",
+        "name": "Cupcake",
+        "TotalPrice": "3.7",
+        "Availability": "1"
+    }
+]

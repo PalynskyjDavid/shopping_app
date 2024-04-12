@@ -1,20 +1,17 @@
 const path = require("path");
 const Ajv = require("ajv").default;
-const CartDao = require("../../dao/cart-dao.js");
-let dao = new CartDao(
-  path.join(__dirname, "..", "..", "storage", "carts.json")
+const roleDao = require("../../dao/role-dao.js");
+let dao = new roleDao(
+  path.join(__dirname, "..", "..", "storage", "roles.json")
 );
 
 let schema = {
   type: "object",
   properties: {
-    Id: { type: "string"},
-    UserId: { type: "string"},
-    name: { type: "string" },
-    TotalPrice: { type: "number"},
-    Availability: { type: "bool"}
+    Id: { type: "string" },
+    name: { type: "string" }
   },
-  required: ["Id", "UserId", "Name"],
+  required: ["Id", "name"],
 };
 
 async function CreateAbl(req, res) {
@@ -22,9 +19,9 @@ async function CreateAbl(req, res) {
     const ajv = new Ajv();
     const valid = ajv.validate(schema, req.body);
     if (valid) {
-      let cart = req.body;
-      cart = await dao.createClassroom(cart);
-      res.json(cart);
+      let role = req.body;
+      role = await dao.createrole(role);
+      res.json(role);
     } else {
       res.status(400).send({
         errorMessage: "validation of input failed",
@@ -33,8 +30,11 @@ async function CreateAbl(req, res) {
       });
     }
   } catch (e) {
-    console.log(e);
-    res.status(500).send(e);
+    if (e.includes("role with shortName ")) {
+      res.status(400).send({ errorMessage: e, params: req.body });
+    } else {
+      res.status(500).send(e);
+    }
   }
 }
 
