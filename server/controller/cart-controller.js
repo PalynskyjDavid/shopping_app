@@ -11,9 +11,14 @@ router.post("/create", async (req, res) => {
     await CreateAbl(req, res);
 });
 
-//router.delete("/delete/cardId:id", async (req, res) => {
-//router.delete("/delete/delete/cartsid:id", async (req, res) => {
-    router.delete("/delete/:id", async (req, res) => {
+// http://localhost:8000/cart/delete/1
+/*
+router.delete("/delete/:id", async (req, res) => {
+    await DeleteAbl(req, res);
+});
+*/
+// http://localhost:8000/cart/delete/cartsid1
+router.delete("/delete/:cartsid", async (req, res) => {
     await DeleteAbl(req, res);
 });
 
