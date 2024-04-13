@@ -51,7 +51,7 @@ class CartsDao {
 
   async deleteCart(id) {
     let cartlist = await this._loadAllCarts();
-    const cartIndex = cartlist.findIndex((b) => b.id === id);
+    const cartIndex = cartlist.findIndex((b) => b.Id === id);
     if (cartIndex >= 0) {
       cartlist.splice(cartIndex, 1);
     }
@@ -75,7 +75,7 @@ class CartsDao {
       } else {
         throw new Error(
           "Unable to read from storage. Wrong data format. " +
-            this._getStorageLocation()
+          this._getStorageLocation()
         );
       }
     }

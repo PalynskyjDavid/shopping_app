@@ -1,38 +1,38 @@
 [
-    {
-        "Id": "usersid1",
-        "RoleList": "0",
-        "PasswordHash": "hashed123",
-        "Name": "Alice",
-        "Surname": "Johnson",
-        "Gender": true,
-        "Email": "alice@example.com",
-        "Phone": 1234567890,
-        "Address": "123 Main St, Cityville",
-        "ThemeMode": true
-    },
-    {
-        "Id": "usersid2",
-        "RoleList": "1",
-        "PasswordHash": "hashed456",
-        "Name": "Bob",
-        "Surname": "Smith",
-        "Gender": false,
-        "Email": "bob@example.com",
-        "Phone": 9876543210,
-        "Address": "456 Elm St, Townsville",
-        "ThemeMode": false
-    },
-    {
-        "Id": "usersid3",
-        "RoleList": "2",
-        "PasswordHash": "hashed789",
-        "Name": "Tester",
-        "Surname": "Testing",
-        "Gender": false,
-        "Email": "test@example.com",
-        "Phone": 5551234567,
-        "Address": "789 Oak St, Villagetown",
-        "ThemeMode": true
-    }
+  {
+    "Id": "usersid1",
+    "RoleList": "2",
+    "PasswordHash": "changedpassword",
+    "Name": "David",
+    "Surname": "Palynskyj",
+    "Gender": true,
+    "Email": "changed@email.com",
+    "Phone": 123456789,
+    "Address": "Changed Address",
+    "ThemeMode": false
+  },
+  {
+    "Id": "usersid2",
+    "RoleList": "1",
+    "PasswordHash": "hashed456",
+    "Name": "Bob",
+    "Surname": "Smith",
+    "Gender": false,
+    "Email": "bob@example.com",
+    "Phone": 9876543210,
+    "Address": "456 Elm St, Townsville",
+    "ThemeMode": false
+  },
+  {
+    "Id": "usersid3",
+    "RoleList": "2",
+    "PasswordHash": "hashed789",
+    "Name": "Tester",
+    "Surname": "Testing",
+    "Gender": false,
+    "Email": "test@example.com",
+    "Phone": 5551234567,
+    "Address": "789 Oak St, Villagetown",
+    "ThemeMode": true
+  }
 ]

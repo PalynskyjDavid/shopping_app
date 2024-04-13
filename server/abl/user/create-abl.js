@@ -14,7 +14,7 @@ let schema = {
     type: "object",
     properties: {
       Id: { type: "string" },
-      RoleList: roleDao.listRoles(), //["admin", "user", "bot"]
+      RoleList: { type: "bool" },//roleDao.listRoles(), //["admin", "user", "bot"]
       PasswordHash: { type: "string", minLength: 4 },
       Name: { type: "string" },
       Surname: { type: "string" },

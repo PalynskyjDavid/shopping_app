@@ -36,7 +36,7 @@ class UsersDao {
 
   async updateUser(user) {
     let userlist = await this._loadAllUsers();
-    const userIndex = userlist.findIndex((b) => b.id === user.id);
+    const userIndex = userlist.findIndex((b) => b.Id === user.Id);
     if (userIndex < 0) {
       throw new Error(`user with given id ${user.id} does not exists.`);
     } else {
