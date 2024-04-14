@@ -7,7 +7,7 @@ let dao = new CartDao(
 
 async function DeleteAbl(req, res) {
     console.log("Deleting: ", req.params);
-    const id = req.params.cardId;
+    const id = req.params.id;
     await dao.deleteCart(id);
     res.json({});
 }

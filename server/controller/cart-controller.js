@@ -11,7 +11,6 @@ router.post("/create", async (req, res) => {
     await CreateAbl(req, res);
 });
 
-<<<<<<< Updated upstream
 // http://localhost:8000/cart/delete/1
 /*
 router.delete("/delete/:id", async (req, res) => {
@@ -19,13 +18,11 @@ router.delete("/delete/:id", async (req, res) => {
 });
 */
 // http://localhost:8000/cart/delete/cartsid1
-router.delete("/delete/:cartsid", async (req, res) => {
-=======
+//router.delete("/delete/:cartsid", async (req, res) => {
 //router.delete("/delete/cardId:id", async (req, res) => {
 //router.delete("/delete/delete/cartsid:id", async (req, res) => {
 router.delete("/delete/:id", async (req, res) => {
-    console.log("REQ: ",req);
->>>>>>> Stashed changes
+    //console.log("REQ: ",req);
     await DeleteAbl(req, res);
 });
 

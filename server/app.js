@@ -3,7 +3,7 @@ const express = require("express");
 
 //const Router = rqeuire("./controller/-controller")
 const productRouter = require("./controller/product-controller.js");
-const cartRouter = require("./controller/cart-controller.js")
+const cartRouter = require("./controller/cart-controller.js");
 const userRouter = require("./controller/user-controller.js");
 const roleRouter = require("./controller/role-controller.js");
 
