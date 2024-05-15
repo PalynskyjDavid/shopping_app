@@ -1,18 +1,22 @@
 [
-    {
-        "Id": "5",
-        "name": "Admin"
-    },
-    {
-        "Id": "0",
-        "name": "Admin"
-    },
-    {
-        "Id": "1",
-        "name": "User"
-    },
-    {
-        "Id": "2",
-        "name": "Tester"
-    }
+  {
+    "Id": "5",
+    "name": "Admin"
+  },
+  {
+    "Id": "1",
+    "name": "User"
+  },
+  {
+    "Id": "2",
+    "name": "Tester"
+  },
+  {
+    "Id": "a412108dab21d086",
+    "Name": "User"
+  },
+  {
+    "Name": "Users",
+    "Id": "faadb9327d08b9ca"
+  }
 ]

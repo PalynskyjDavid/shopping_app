@@ -1,17 +1,5 @@
 [
   {
-    "Id": "usersid1",
-    "RoleList": "2",
-    "PasswordHash": "changedpassword",
-    "Name": "David",
-    "Surname": "Palynskyj",
-    "Gender": true,
-    "Email": "changed@email.com",
-    "Phone": 123456789,
-    "Address": "Changed Address",
-    "ThemeMode": false
-  },
-  {
     "Id": "usersid2",
     "RoleList": "1",
     "PasswordHash": "hashed456",
@@ -34,5 +22,53 @@
     "Phone": 5551234567,
     "Address": "789 Oak St, Villagetown",
     "ThemeMode": true
+  },
+  {
+    "Id": "usersid1",
+    "RoleList": "2",
+    "PasswordHash": "newpassword",
+    "Name": "David",
+    "Surname": "Palynskyj",
+    "Gender": true,
+    "Email": "changed@email.com",
+    "Phone": 123456789,
+    "Address": "Changed Address",
+    "ThemeMode": false
+  },
+  {
+    "RoleList": "1",
+    "Gender": true,
+    "Phone": 453687426,
+    "Address": "New Address",
+    "ThemeMode": false,
+    "PasswordHash": "newpassword",
+    "Name": "David",
+    "Surname": "Palynskyj",
+    "Email": "myEmail@gmail.com",
+    "Id": "54c97656aeaf1f1b"
+  },
+  {
+    "RoleList": "1",
+    "Gender": true,
+    "Phone": 453687426,
+    "Address": "New Address",
+    "ThemeMode": false,
+    "PasswordHash": "newpassword",
+    "Name": "David",
+    "Surname": "Palynskyj",
+    "Email": "myEmail@gmail.com",
+    "Id": "c55e954337714521"
+  },
+  {
+    "RoleList": "1",
+    "Gender": true,
+    "Phone": 987654321,
+    "Address": "New Address",
+    "ThemeMode": false,
+    "PasswordHash": "newpassword",
+    "Name": "David",
+    "Surname": "Palynskyj",
+    "Email": "myEmail@gmail.com",
+    "Id": "a96a11919d47b240"
   }
 ]

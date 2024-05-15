@@ -8,22 +8,28 @@ let dao = new CartDao(
 let schema = {
   type: "object",
   properties: {
-    Id: { type: "string"},
+    //Id: { type: "string"},
     UserId: { type: "string"},
-    name: { type: "string" },
-    TotalPrice: { type: "number"},
-    Availability: { type: "bool"}
+    Name: { type: "string" },
+    //TotalPrice: { type: "number"},
+    //Availability: { type: "bool"}
   },
-  required: ["Id", "UserId", "Name"],
+  required: ["UserId", "Name"],
 };
 
 async function CreateAbl(req, res) {
+
+  let defaultCart = {
+    TotalPrice: "0",
+    Availability: false
+  };
+  let cart = {...defaultCart, ...req.body}
+
   try {
     const ajv = new Ajv();
-    const valid = ajv.validate(schema, req.body);
+    const valid = ajv.validate(schema, cart);
     if (valid) {
-      let cart = req.body;
-      cart = await dao.createClassroom(cart);
+      cart = await dao.createCart(cart);
       res.json(cart);
     } else {
       res.status(400).send({

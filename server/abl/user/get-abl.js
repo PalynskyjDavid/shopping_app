@@ -17,6 +17,7 @@ async function GetAbl(req, res) {
   try {
     const ajv = new Ajv();
     const body = req.query.Id ? req.query : req.body;
+    console.log(body);
     const valId = ajv.validate(schema, body);
     if (valId) {
       const userId = body.Id;

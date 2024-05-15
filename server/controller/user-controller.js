@@ -7,11 +7,11 @@ const UpdateAbl = require("../abl/user/update-abl.js");
 const GetAbl = require("../abl/user/get-abl.js");
 const ListAbl = require("../abl/user/list-abl.js");
 
-router.post("/create", async (req, res) => {
+router.put("/create", async (req, res) => {
     await CreateAbl(req, res);
 });
 
-router.post("/delete", async (req, res) => {
+router.delete("/delete/:Id", async (req, res) => {
     await DeleteAbl(req, res);
 });
 

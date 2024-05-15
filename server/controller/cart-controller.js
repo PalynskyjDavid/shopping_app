@@ -7,7 +7,7 @@ const UpdateAbl = require("../abl/cart/update-abl.js");
 const GetAbl = require("../abl/cart/get-abl.js");
 const ListAbl = require("../abl/cart/list-abl.js");
 
-router.post("/create", async (req, res) => {
+router.put("/create", async (req, res) => {
     await CreateAbl(req, res);
 });
 
@@ -21,8 +21,10 @@ router.delete("/delete/:id", async (req, res) => {
 //router.delete("/delete/:cartsid", async (req, res) => {
 //router.delete("/delete/cardId:id", async (req, res) => {
 //router.delete("/delete/delete/cartsid:id", async (req, res) => {
-router.delete("/delete/:id", async (req, res) => {
+router.delete("/delete/:Id", async (req, res) => {
+//router.delete("/delete", async (req, res) => {
     //console.log("REQ: ",req);
+    //console.log("ID?: ", req.params.Id);
     await DeleteAbl(req, res);
 });
 

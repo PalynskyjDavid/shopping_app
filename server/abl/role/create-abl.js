@@ -9,9 +9,9 @@ let schema = {
   type: "object",
   properties: {
     Id: { type: "string" },
-    name: { type: "string" }
+    Name: { type: "string" }
   },
-  required: ["Id", "name"],
+  required: [/*"Id",*/ "Name"],
 };
 
 async function CreateAbl(req, res) {
@@ -30,8 +30,10 @@ async function CreateAbl(req, res) {
       });
     }
   } catch (e) {
-    if (e.includes("role with shortName ")) {
-      res.status(400).send({ errorMessage: e, params: req.body });
+    if (e.includes("role with Name ")) {
+      res.status(400).send({ 
+        errorMessage: e, 
+        params: req.body });
     } else {
       res.status(500).send(e);
     }

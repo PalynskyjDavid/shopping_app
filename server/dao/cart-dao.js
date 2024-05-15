@@ -17,10 +17,10 @@ class CartsDao {
   async createCart(cart) {
     let cartlist = await this._loadAllCarts();
     let currentCart = cartlist.find(
-      (item) => item.name === cart.name
+      (item) => item.Name === cart.Name
     );
     if (currentCart) {
-      throw `cart with name ${cart.name} already exists in db`;
+      throw `cart with name ${cart.Name} already exists in db`;
     }
     cart.id = crypto.randomBytes(8).toString("hex");
     cartlist.push(cart);

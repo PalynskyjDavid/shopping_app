@@ -51,7 +51,7 @@ class ProductsDao {
 
   async deleteProduct(id) {
     let productlist = await this._loadAllProducts();
-    const productIndex = productlist.findIndex((b) => b.id === id);
+    const productIndex = productlist.findIndex((b) => b.Id === id);
     if (productIndex >= 0) {
       productlist.splice(productIndex, 1);
     }

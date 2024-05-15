@@ -16,13 +16,17 @@ class RolesDao {
 
   async createRole(role) {
     let rolelist = await this._loadAllRoles();
-    let currentRole = rolelist.find(
-      (item) => item.shortName === role.shortName
+    // let currentRoleId = rolelist.find(
+    //   (item) => item.Id === role.Id
+    // );
+    let currentRoleName = rolelist.find(
+      (item) => item.Name === role.Name
     );
-    if (currentRole) {
-      throw `role with shortName ${role.shortName} already exists in db`;
+    if (currentRoleName) {
+      //throw `role with Id ${role.Id} and name ${role.Name} already exists in db`;
+      throw `role with Name: "${role.Name}" already exists in db`;
     }
-    role.id = crypto.randomBytes(8).toString("hex");
+    role.Id = crypto.randomBytes(8).toString("hex");
     rolelist.push(role);
     await wf(this._getStorageLocation(), JSON.stringify(rolelist, null, 2));
     return role;
@@ -51,7 +55,7 @@ class RolesDao {
 
   async deleteRole(id) {
     let rolelist = await this._loadAllRoles();
-    const roleIndex = rolelist.findIndex((b) => b.id === id);
+    const roleIndex = rolelist.findIndex((b) => b.Id === id);
     if (roleIndex >= 0) {
       rolelist.splice(roleIndex, 1);
     }

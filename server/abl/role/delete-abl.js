@@ -15,16 +15,17 @@ let schema = {
 
 async function DeleteAbl(req, res) {
   const ajv = new Ajv();
-  const valid = ajv.validate(schema, req.body);
+  const valid = ajv.validate(schema, req.params);
   try {
     if (valid) {
-      const roleId = req.body.Id;
+      const roleId = req.params.Id//req.body.Id;
+      console.log(roleId);
       await dao.deleteRole(roleId);
       res.json({});
     } else {
       res.status(400).send({
         errorMessage: "validation of input failed",
-        params: req.body,
+        params: req.params,
         reason: ajv.errors,
       });
     }

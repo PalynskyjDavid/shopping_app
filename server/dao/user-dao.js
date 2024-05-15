@@ -22,7 +22,7 @@ class UsersDao {
     if (currentUser) {
       throw `user with Id ${user.Id} already exists in db`;
     }
-    user.id = crypto.randomBytes(8).toString("hex");
+    user.Id = crypto.randomBytes(8).toString("hex");
     userlist.push(user);
     await wf(this._getStorageLocation(), JSON.stringify(userlist, null, 2));
     return user;
@@ -51,7 +51,7 @@ class UsersDao {
 
   async deleteUser(id) {
     let userlist = await this._loadAllUsers();
-    const userIndex = userlist.findIndex((b) => b.id === id);
+    const userIndex = userlist.findIndex((b) => b.Id === id);
     if (userIndex >= 0) {
       userlist.splice(userIndex, 1);
     }

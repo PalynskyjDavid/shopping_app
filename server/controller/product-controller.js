@@ -17,7 +17,7 @@ router.post("/create", async (req, res) => {
     await CreateAbl(req, res);
 });
 
-router.post("/delete", async (req, res) => {
+router.delete("/delete/:Id", async (req, res) => {
     await DeleteAbl(req, res);
 });
 
