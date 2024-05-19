@@ -1,8 +1,6 @@
 const express = require("express");
 const router = express.Router();
 
-
-
 /*PASSING DATA WITH REST API*/
 //by params "/get/David"
 router.get("/get/:Id", async (req, res) => {

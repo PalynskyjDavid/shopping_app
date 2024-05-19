@@ -18,14 +18,14 @@ let schema = {
 };
 
 async function CreateAbl(req, res) {
-
-  let defaultCart = {
-    TotalPrice: "0",
-    Availability: false
-  };
-  let cart = {...defaultCart, ...req.body}
-
   try {
+
+    let defaultCart = {
+      TotalPrice: "0",
+      Availability: false
+    };
+    let cart = {...defaultCart, ...req.body}
+
     const ajv = new Ajv();
     const valid = ajv.validate(schema, cart);
     if (valid) {

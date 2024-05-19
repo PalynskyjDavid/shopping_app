@@ -1,0 +1,102 @@
+.App {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+
+.header {
+  display:flex;
+  top: 0;
+  justify-content: space-between;
+  background-color:cadetblue;
+  width: 100%;
+}
+
+@media only screen and (max-width: 670px) {
+  .header {
+    
+    background-color: lightblue;
+  }
+  .App {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+.header div {
+  height: 100%;
+}
+
+.th1 {
+  width: 40%;
+}
+
+.th2 {
+  width: 30%;
+}
+
+.icon {
+  margin-left: auto;
+}
+
+input {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.showcase {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.showcase div {
+  width: 50%;
+  min-height: 50px;
+  background-color: antiquewhite;
+  border: 2px solid #282c34;
+  box-sizing:border-box;
+}
+
+.showcase div:nth-child(n+3) {
+  margin-top: -2px;
+}
+
+.showcase div:nth-child(2n) {
+  margin-left: -2px;
+}
+
+.header svg {
+  min-height: 48px;
+  min-width: 48px;
+}
+
+.header input {
+  max-width: 80%;
+}

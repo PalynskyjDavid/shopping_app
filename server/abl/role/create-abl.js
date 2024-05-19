@@ -30,7 +30,7 @@ async function CreateAbl(req, res) {
       });
     }
   } catch (e) {
-    if (e.includes("role with Name ")) {
+    if (e) {//.includes("role with Name ")) {
       res.status(400).send({ 
         errorMessage: e, 
         params: req.body });

@@ -16,13 +16,13 @@ class ProductsDao {
 
   async createProduct(product) {
     let productlist = await this._loadAllProducts();
-    let currentProduct = productlist.find(
-      (item) => item.Id === porduct.Id
-    );
-    if (currentProduct) {
-      throw `product with Id ${product.Id} already exists in db`;
-    }
-    product.id = crypto.randomBytes(8).toString("hex");
+    // let currentProduct = productlist.find(
+    //   (item) => item.Id === porduct.Id
+    // );
+    // if (currentProduct) {
+    //   throw `product with Id ${product.Id} already exists in db`;
+    // }
+    product.Id = crypto.randomBytes(8).toString("hex");
     productlist.push(product);
     await wf(this._getStorageLocation(), JSON.stringify(productlist, null, 2));
     return product;

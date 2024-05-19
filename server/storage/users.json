@@ -70,5 +70,29 @@
     "Surname": "Palynskyj",
     "Email": "myEmail@gmail.com",
     "Id": "a96a11919d47b240"
+  },
+  {
+    "RoleList": "1",
+    "Gender": true,
+    "Phone": 987654321,
+    "Address": "New Address",
+    "ThemeMode": false,
+    "PasswordHash": "newpassword",
+    "Name": "Pepa",
+    "Surname": "Pepino",
+    "Email": "myEmail@gmail.com",
+    "Id": "233f43754a0faa36"
+  },
+  {
+    "RoleList": "1",
+    "Gender": true,
+    "Phone": 987654321,
+    "Address": "New Address",
+    "ThemeMode": false,
+    "PasswordHash": "newpassword",
+    "Name": "Honza",
+    "Surname": "Honzíno",
+    "Email": "myEmail@gmail.com",
+    "Id": "358d482e4e5ab3d2"
   }
 ]

@@ -18,5 +18,9 @@
   {
     "Name": "Users",
     "Id": "faadb9327d08b9ca"
+  },
+  {
+    "Name": "AIs",
+    "Id": "ea75ec82496593c5"
   }
 ]

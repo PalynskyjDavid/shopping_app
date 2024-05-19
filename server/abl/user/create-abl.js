@@ -48,17 +48,17 @@ let schema = {
 // validate(data).then(successFunc).catch(errorFunc)
 
 async function CreateAbl(req, res) {
-
-  let defaultUser = {
-    RoleList: "1",
-    Gender: true,
-    Phone: 987654321,
-    Address: "New Address",
-    ThemeMode: false
-  };
-  let user = {...defaultUser, ...req.body};
-
   try {
+
+    let defaultUser = {
+      RoleList: "1",
+      Gender: true,
+      Phone: 987654321,
+      Address: "New Address",
+      ThemeMode: false
+    };
+    let user = {...defaultUser, ...req.body};
+
     const ajv = new Ajv();
     const valid = ajv.validate(schema, user/*req.body*/);
     //console.log(valid, req.body.Email);

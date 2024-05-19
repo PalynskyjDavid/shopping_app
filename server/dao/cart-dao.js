@@ -22,7 +22,7 @@ class CartsDao {
     if (currentCart) {
       throw `cart with name ${cart.Name} already exists in db`;
     }
-    cart.id = crypto.randomBytes(8).toString("hex");
+    cart.Id = crypto.randomBytes(8).toString("hex");
     cartlist.push(cart);
     await wf(this._getStorageLocation(), JSON.stringify(cartlist, null, 2));
     return cart;
